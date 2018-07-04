@@ -1,0 +1,43 @@
+<html>
+    <div class="reg">
+        <h5><a class="tag" (click)="goRegister()">Become a cook here!</a></h5>
+        <h5><a class="tag" (click)="goLogin()">Login here!</a></h5>
+    </div>
+    
+    <div class="zipform ">
+        <form (submit)="search(zipcode)" #zipcode="ngForm">
+            <h1 > Search food in your area:</h1>
+            <h2><input class="from-control" type="text" name="zipcode" placeholder="Zip Code" ngModel></h2>
+            <h2><input class="btn btn-primary" type="submit" value="Search"></h2>    
+        </form>
+    </div>
+    <div class="search_box">
+</div>
+<div class="displayItem" *ngIf="display">
+    <div *ngFor="let food of foods">
+        <div class="items" (click)="showDetail(food._id)" style="border: 1px solid salmon;">
+            <p>Dish name: {{food.dish}}</p>
+            <img [src]="food.pic" alt="food" width=350, height=250>
+            <p> Price: {{food.price}}</p>
+            <p>Quantity: {{food.quan}}</p>
+            <p>Description: {{food.desc}}</p>
+            <p>Expiration Date: {{food.exp}}</p>
+        </div>
+    </div>
+</div>
+
+<div class="displayItem" *ngIf="findFood">
+        <div   *ngFor="let food of searchFoods">
+                <div class="items" (click)="showDetail(food._id)" style="border: 1px solid salmon;">
+                    <p>Dish name: {{food.dish}}</p>
+                    <img [src]="food.pic" alt="food" width=350, height=250>
+                    <p> Price: {{food.price}}</p>
+                    <p>Quantity: {{food.quan}}</p>
+                    <p>Description: {{food.desc}}</p>
+                    <p>Expiration Date: {{food.exp}}</p>
+                </div>
+            </div>
+        </div>
+
+
+</html>

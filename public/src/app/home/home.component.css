@@ -1,0 +1,44 @@
+.zipform {
+    margin-left: 20%;
+    text-align: center;
+    width: 500px;
+    display: block;
+}
+
+.reg {
+    size: 12pt;
+    font-family: sans-serif;
+    color: blueviolet;
+    height: 50px;
+    width: 200px;
+    text-align: left;
+    /* float: right; */
+    display: block;
+}
+.tag{
+    size: 22pt;
+    height: 10px;
+    
+}
+
+.displayItem {
+    /* box-sizing: border-box; */
+    width: 1200px;
+    height: auto;
+    -webkit-column-count: 2;
+}
+.items {
+    margin: 15px;
+    width: 380px;
+    font-size: 20px;
+    text-align: center;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+/* // */
+.search_box {
+    width: 1200px;
+    height: 40px;
+    display: block;
+}
